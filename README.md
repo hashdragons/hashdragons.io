@@ -14,7 +14,7 @@ Anyone can get involved in the evolution of the game, or implement supporting ap
 
 We are currently in EARLY RELEASE, so things are moving fast!
 
-[ABOUT HASHDRAGONS](./hashdragons1.md)
+[ABOUT HASHDRAGONS - CHAPTER 1](./hashdragons1.md)
 
 [BUY YOUR HASHDRAGON](./brood1.md)
 
