@@ -3,14 +3,19 @@
 #### <div align="center">Brood 1 - 04/04/2021</div>
 
 # HOW DO I BUY A HASHDRAGON?
+This first brood release represents one sixteenth of all the dragonseed, and so one sixteenth of all the original hashdragons that will ever be sold.
+
+WARNING:
+Whilst for this early release, we have made it easy to hatch a dragonseed, please be sure to follow the steps below. Failed payments (ones that do not result in the hatching of a hashdragon) will be refunded by the seeders to the CHANGE ADDRESS from the failed payment. This may take up to SEVEN DAYS. All warnings done, please be sure to follow the simple steps below.
 
 IMPORTANT STEPS:
 1. Click one of the "pay to address" links below
 1. Check that the address balance is exactly 920 Satoshi, or 0.00000920 BCH
-1. Make a payment of 0.002 BCH using the displayed QR code on the address page
+1. Check that there are no unconfirmed transactions against that payment address
+1. Make a payment of 0.002 BCH or more using the displayed QR code on the address page
 1. You should WAIT UP TO 48 HOURS for the hashdragon to be delivered to you
 
-The Hashdragon will be sent as (an OP_RETURN transaction) to the CHANGE ADDRESS specified in your payment.
+The Hashdragon will be delivered as (an OP_RETURN transaction) to the CHANGE ADDRESS specified in your payment.
 
 _Status Last Updated: 2021-04-04T21:28:17Z_
 
