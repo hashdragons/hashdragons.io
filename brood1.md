@@ -4,10 +4,12 @@
 
 # Brood 1 Release
 
-STEPS TO BEGIN HATCHING:
+HOW DO I BUY A HASHDRAGON?
+
+IMPORTANT STEPS:
 1. Click one of the "pay to address" links below
 1. Check that the address balance is exactly 920 Satoshi, or 0.00000920 BCH
-1. Make a payment of 0.002 BCH using the displayed QR code for the address
+1. Make a payment of 0.002 BCH using the displayed QR code on the address page
 1. You should WAIT UP TO 48 HOURS for the hashdragon to be delivered to you
 
 The Hashdragon will be sent as (an OP_RETURN transaction} to the CHANGE ADDRESS specified in your payment.
