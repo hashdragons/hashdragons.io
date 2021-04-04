@@ -6,7 +6,7 @@
 This first brood release represents one sixteenth of all the dragonseed, and so one sixteenth of all the original hashdragons that will ever be sold.
 
 WARNING:
-Whilst for this early release, we have made it easy to hatch a dragonseed, please be sure to follow the steps below. Failed payments (ones that do not result in the hatching of a hashdragon) will be refunded by the seeders to the CHANGE ADDRESS from the failed payment. This may take up to SEVEN DAYS. All warnings done, please be sure to follow the simple steps below.
+For this early release, we have made it easy to hatch a dragonseed, but please be sure to follow the steps below. Failed payments (ones that do not result in the hatching of a hashdragon) will be refunded by the seeders to the CHANGE ADDRESS from the failed payment. This may take up to SEVEN DAYS. All warnings done, please be sure to follow the simple steps below.
 
 IMPORTANT STEPS:
 1. Click one of the "pay to address" links below
