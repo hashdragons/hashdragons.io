@@ -16,6 +16,6 @@ We are currently in EARLY RELEASE, so things are moving fast!
 
 [ABOUT HASHDRAGONS](./hashdragons1.md)
 
-[BUY YOUR HASHDRAGON](./brood1.md.html)
+[BUY YOUR HASHDRAGON](./brood1.md)
 
 <div align="center" style="font-size:30pt;">&#x1362;</div>

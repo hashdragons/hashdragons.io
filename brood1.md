@@ -1,5 +1,6 @@
-<div align="center" style="font-size:30pt;">&#x136c;</div>
-<div align="center" style="font-size:8pt;">Brood 1 - 04/04/2021</div>
+# <div align="center">&#x136c;</div><br/><div align="center">Hashdragons.io</div>
+## <div align="center">Breed &#xb7; Trade &#xb7; Fight</div>
+#### <div align="center">Brood 1 - 04/04/2021</div>
 
 # Brood 1 Release
 
@@ -11,7 +12,7 @@ STEPS TO BEGIN HATCHING:
 
 The Hashdragon will be sent as (an OP_RETURN transaction} to the CHANGE ADDRESS specified in your payment.
 
-Status Last Updated: 2021-04-04T19:56:45Z
+_Status Last Updated: 2021-04-04T21:28:17Z_
 
 |Status|Dragonseed|PAY TO ADDRESS|
 |-|-|-|

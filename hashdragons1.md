@@ -185,7 +185,7 @@ It is from the sale of these original dragonseed that `hashdragons.io` will fund
 
 A BCH payment to the keeper address associated with the dragonseed hatch transaction will result in the seeders transfering the hashdragon that it represents to the address from which you made the payment.
 
-Further instructions on making a safe payment for your hashdragon and a list of the Brood 1 transactions/pay-to addresses and can be found in [How to buy my Hashdragon?](./brood1.md.html).
+Further instructions on making a safe payment for your hashdragon and a list of the Brood 1 transactions/pay-to addresses and can be found in [How to buy my Hashdragon?](./brood1.md).
 
 Once early releases are done, we will enable (and require) permissionless trading and the ability to self-refund, but note that this will require more complex payment script on the output and the `OP_RETURN` for the transaction to be set correctly using the hashdragons protocol.
 
