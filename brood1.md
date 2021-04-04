@@ -2,9 +2,7 @@
 ## <div align="center">Breed &#xb7; Trade &#xb7; Fight</div>
 #### <div align="center">Brood 1 - 04/04/2021</div>
 
-# Brood 1 Release
-
-HOW DO I BUY A HASHDRAGON?
+# HOW DO I BUY A HASHDRAGON?
 
 IMPORTANT STEPS:
 1. Click one of the "pay to address" links below

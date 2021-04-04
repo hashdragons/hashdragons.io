@@ -2,9 +2,9 @@
 ## <div align="center">Breed &#xb7; Trade &#xb7; Fight</div>
 #### <div align="center">Brood 1 - 04/04/2021</div>
 
-## Genesis
+## Genesis and Dragonroot
 
-The __genesis__ transaction, established 04/04/2020, is in BCH Block 629465:
+The __genesis__ transaction for Hashdragons, was established 04/04/2020 and is in BCH Block 629465:
 https://explorer.bitcoin.com/bch/tx/34c16ec249253d792e246ae853af1ed93ec83551cc71c4ff017f45beb1d8b3f0
 
 The genesis transaction in turn funded __dragonroot__ in BCH block 629590:
@@ -163,6 +163,8 @@ The general format for a hashdragons transaction in `OP_RETURN` is (where `LE` m
   </tr>
   <tr>
  </table>
+
+The __keeper__ of a Hashdragon is the unspent transaction address that is paired with a valid hashdragon `OP_RETURN` that can be traced back to dragonroot.
 
 ## About Dragonseed
 The __dragonseed__ for a hashdragon is the SHA256 double hash (SHA256D) of the hashdragon.
