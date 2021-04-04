@@ -164,7 +164,7 @@ The general format for a hashdragons transaction in `OP_RETURN` is (where `LE` m
   <tr>
  </table>
 
-The __keeper__ of a Hashdragon is the unspent transaction address that is paired with a valid hashdragon `OP_RETURN` that can be traced back to dragonroot.
+The __keeper__ of a hashdragon is the unspent transaction address that is paired with a valid hashdragon `OP_RETURN` that can be traced back to dragonroot.
 
 ## About Dragonseed
 The __dragonseed__ for a hashdragon is the SHA256 double hash (SHA256D) of the hashdragon.
