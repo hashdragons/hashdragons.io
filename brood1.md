@@ -10,7 +10,7 @@ IMPORTANT STEPS:
 1. Make a payment of 0.002 BCH using the displayed QR code on the address page
 1. You should WAIT UP TO 48 HOURS for the hashdragon to be delivered to you
 
-The Hashdragon will be sent as (an OP_RETURN transaction} to the CHANGE ADDRESS specified in your payment.
+The Hashdragon will be sent as (an OP_RETURN transaction) to the CHANGE ADDRESS specified in your payment.
 
 _Status Last Updated: 2021-04-04T21:28:17Z_
 
