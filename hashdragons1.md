@@ -2,15 +2,6 @@
 ## <div align="center">Breed &#xb7; Trade &#xb7; Fight</div>
 #### <div align="center">Brood 1 - 04/04/2021</div>
 
-## Background
-Welcome to a new kind of game!
-
-Hashdragons is fully open and permissionless, and played on the Bitcoin Cash (BCH) blockchain.
-
-The purpose of `hashdragons.io` is to seed the game, introduce the initial technical protocol, the rules on how to play the game. Our second mission is to bring richness to the exploration, puzzles (some harder than others), and to reveal the deep mythic story of the concept.
-
-Anyone can get involved in the evolution of the game, or implement supporting applications on any platform, create trading exchanges, organize breeding hubs, battlenets, or anything else that they wish to imagine.
-
 ## Genesis
 
 The __genesis__ transaction, established 04/04/2020, is in BCH Block 629465:
