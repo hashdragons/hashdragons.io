@@ -17,6 +17,8 @@ IMPORTANT STEPS:
 
 The Hashdragon will be delivered as (an OP_RETURN transaction) to the CHANGE ADDRESS specified in your payment.
 
+NOTE: Once hatched, your hashdragon will be safe even should you spend the input associated with your hashdragon. The hashdragon will not move with the payment, but will remain associated to that address and can be moved later. How to do this will be clear when we publish the finalized protocol events and formats for "wandering" and "hibernating" transactions.
+
 _Status Last Updated: 2021-04-05T15:43:19Z_
 
 |Status|Dragonseed|PAY TO ADDRESS|
