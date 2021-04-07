@@ -58,7 +58,7 @@ A __hashdragon__ is a 32 byte sequence beginning with the magic byte value `0xD4
 </svg>
 -->
 
-|Offset|Byte Size|Type|Virtue|Tetrad Groups|
+|Offset|Byte Size|Type|Virtue|Tetrad Group|
 |-|-|-|-|-|
 0|1|byte|Dragoncode|Essence
 1|2|16 flags|Identity (Empathy)
@@ -71,10 +71,10 @@ A __hashdragon__ is a 32 byte sequence beginning with the magic byte value `0xD4
 11|1|int8|Truth
 12|1|int8|Magic|Power
 15|3|24 flags|Special Powers
-16|4|int32|Manifestation|Physica
-20|4|int32|Legends|Arcana
-24|4|int32|Secrets|Cabala
-28|2|int16|Maturity|Karma
+16|4|int32|Physica|Manifestation
+20|4|int32|Arcana|Legends
+24|4|int32|Cabala|Secrets
+28|2|int16|Karma|Maturity
 30|2|int16|Sigil
 
 The overall __strength__ of the hashdragon is the number of set bits across all 32 bytes when taken as a sequence of 256 bits. If the hashdragon's Strength is &gt; 140, it is generally referred to as "Powerful".
