@@ -86,17 +86,17 @@ A hashdragon is further described verbally by looking at the value of its single
 |Virtue|Int Value|Description|
 |-|-|-|
 Inner Light|&lt; 20|Ignorant
-&nbsp;|> 200|Intelligent
-&nbsp;|> 240|Enlightented
-&nbsp;|> 255|Genius
-Presence|0|Invisible
-&nbsp;|&lt;  5|Ghostly
-&nbsp;|&lt; 20|Shadowy
-&nbsp;|&gt; 210|Practical
-&nbsp;|&gt; 250|Shimmering
+&nbsp;|&gt; 200|Intelligent
+&nbsp;|&gt; 240|Enlightented
+&nbsp;|255|Genius
+Presence|0|Practical
+&nbsp;|&lt; 20|Shimmering
+&nbsp;|&gt; 220|Shadowy
+&nbsp;|&gt; 250|Ghostly
+&nbsp;|255|Invisibile
 Charm|&lt; 5|Brutal
 &nbsp;|&lt; 15|Unfriendly
-&nbsp;|&gt; 250|Friendly
+&nbsp;|&gt; 190|Friendly
 &nbsp;|&gt; 230|Charming
 &nbsp;|&gt; 250|Shimmering
 Strangeness|&gt; 200|Strange
@@ -113,7 +113,7 @@ Truth|&lt; 5|Lying
 Magic|&lt; 20|Clumsy
 &nbsp;|&gt; 210|Magical
 &nbsp;|&gt; 250|Legendary
-&nbsp;|&gt; 255|Mythical
+&nbsp;|255|Mythical
 
 If none of the virtue values yields a keyword from the list, the hashdragon is usually described as "unremarkable".
 
