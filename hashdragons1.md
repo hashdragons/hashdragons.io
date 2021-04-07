@@ -98,7 +98,7 @@ Charm|&lt; 5|Brutal
 &nbsp;|&lt; 15|Unfriendly
 &nbsp;|&gt; 190|Friendly
 &nbsp;|&gt; 230|Charming
-&nbsp;|&gt; 250|Shimmering
+&nbsp;|&gt; 250|Charismatic
 Strangeness|&gt; 200|Strange
 &nbsp;|&gt; 240|Weird
 Beauty|&lt; 10|Ugly
