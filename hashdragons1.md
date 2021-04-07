@@ -87,7 +87,7 @@ A hashdragon is further described verbally by looking at the value of its single
 |-|-|-|
 Inner Light|&lt; 20|Ignorant
 &nbsp;|> 200|Intelligent
-&nbsp;|> 240|Enlightented
+&nbsp;|> 240|Enlightened
 &nbsp;|> 255|Genius
 Presence|0|Invisible
 &nbsp;|&lt;  5|Ghostly
