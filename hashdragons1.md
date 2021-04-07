@@ -17,6 +17,8 @@ By game definition, the __seeding__ was a one-time only event that took place pr
 ## What is a Hashdragon?
 A __hashdragon__ is a 32 byte sequence beginning with the magic byte value `0xD4`, or __dragoncode__. The dragoncode is followed by 31 bytes which describe its attributes or __virtues__.
 
+NOTE: All integers in a hashdragon are in Network Byte Order (big-endian).
+
 <!--svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 120" width="800">
 	<g transform="translate(25,25)">
 			<path fill="#fff" stroke="#000" stroke-width="1" d="M0,0 L800,0 800,50 0,50 Z"/>
