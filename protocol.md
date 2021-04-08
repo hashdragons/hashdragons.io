@@ -20,7 +20,7 @@ A hashdragon's lifeline is a series of __events__. A hashdragon may only do one 
 Hashdragon transactions are called __events__ (cf. life event)
 
 ### Seeder
-This event type was used exclusively for __seeding__. Further use is after April 2020 is considered invalid.
+This event type was used exclusively for __seeding__. Further use after April 2020 is considered invalid.
 
 ```
 OP_RETURN
@@ -58,9 +58,9 @@ OP_RETURN
 
 
 ### Wander
-Wandering allows the hashdragon to be moved to another keeper address, and so be __gifted__ to a new keeper. It may also indicate that a hashdragon is waking from hiberation (see below), but not participating in any specific events right now.
+Wandering allows the hashdragon to be moved to another keeper address, and so be __gifted__ to a new keeper. It may also indicate that a hashdragon is waking from hibernation (see below), but not participating in any specific events right now.
 
-NOTE: The 'wander' transaction also allows the hashdragon to be __rescued__ where the keeper's output was spent with either no `OP_RETURN`, or had an invalid hashdragon event in its `OP_RETURN`. Rescue is achieved by adding the transaction hash for the last valid event for that hashdragon as the payload. The referenced input _must_ contain the keeper address in the __scriptSig__, and so the transaction will be signature checked to ensure the keeper has not changed.
+NOTE: The 'wander' transaction also allows the hashdragon to be __rescued__ where the keeper's output was spent with either no `OP_RETURN`, or had an invalid hashdragon event in its `OP_RETURN`. Rescue is achieved by adding the transaction hash for the last valid event for that hashdragon as the payload. The referenced input _must_ contain the keeper address in the __scriptSig__, and so the transaction will be signature-checked to ensure the keeper has not changed.
 
 ```
 OP_RETURN
@@ -73,7 +73,7 @@ OP_RETURN
 
 
 ### Hibernate
-Hiberating allow the keeper to declare the hashdragon "asleep" and unlikely to participate in any activity for a while.
+Hibernating allows the keeper to declare the hashdragon "asleep" and unlikely to participate in any activity for a while.
 ```
 OP_RETURN
     <lokad_id: '0xd101d400'> (4 bytes)
@@ -90,7 +90,7 @@ The breeding algorithm is defined to be:
 ```
 ...where `<block_hash>` is the hash of the block header _in which the breed event occurs_, consequently the final result can only be partially predicted.
 
-IMPORTANT: This event is only valid if the Maturity value for both dragons equal or exceed the block height offset of this event since their original Hatch events.  Maturity is bytes 28-29 of the hashdragon a two byte big-endian integer). In theory, this could be anything from the block after their hatching, or up to, at worst, 15 months.
+IMPORTANT: This event is only valid if the Maturity value for both dragons equals or exceeds the block height offset of this event since their original Hatch events.  Maturity is bytes 28-29 of the hashdragon (a two byte big-endian integer). In theory, this could be anything from the block after their hatching, or up to, at worst, 15 months.
 
 ```
 OP_RETURN
