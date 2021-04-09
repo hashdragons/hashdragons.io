@@ -1,37 +1,25 @@
-## Welcome to GitHub Pages
+<div align="center" style="font-size:48pt;">&#x136c;</div>
 
-You can use the [editor on GitHub](https://github.com/hashdragons/hashdragons.io/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+## <div align="center" style="font-size:18pt">Breed &#xb7; Trade &#xb7; Fight</div>
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Welcome to a new kind of game!
 
-### Markdown
+Hashdragons is fully open and permissionless, and played on the Bitcoin Cash (BCH) blockchain.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+The primary purpose of `hashdragons.io` is to seed the game, introduce the initial technical protocol, the rules on how to play the game.
 
-```markdown
-Syntax highlighted code block
+Our second mission is to bring richness to the exploration, puzzles (some harder than others), and to reveal the deep mythic story of the concept.
 
-# Header 1
-## Header 2
-### Header 3
+Anyone can get involved in the evolution of the game, or implement supporting applications on any platform, create trading exchanges, organize breeding hubs, battlenets, or anything else that they wish to imagine.
 
-- Bulleted
-- List
+We are currently in EARLY RELEASE, so things are moving fast!
 
-1. Numbered
-2. List
+## Learn more
 
-**Bold** and _Italic_ and `Code` text
+[LATEST - hashdragons on Twitter](https://www.twitter.com/hashdragons)
 
-[Link](url) and ![Image](src)
-```
+[DISCUSS - r/hashdragons on Reddit](https://www.reddit.com/r/hashdragons)
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+[DEVELOPMENT - hashdragons.io on GitHub](https://github.com/hashdragons/hashdragons.io)
 
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/hashdragons/hashdragons.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+<div align="center" style="font-size:30pt;">&#x1362;</div>
