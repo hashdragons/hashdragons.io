@@ -94,7 +94,7 @@ Inner Light|&lt; 20|Ignorant
 Presence|0|Invisible
 &nbsp;|&lt; 10|Ghost
 &nbsp;|&lt; 30|Shadow
-&nbsp;|&gt 240|Shimmering
+&nbsp;|&gt; 240|Shimmering
 &nbsp;|255|Practical
 Charm|&lt; 5|Brutal
 &nbsp;|&lt; 15|Unfriendly
