@@ -1,6 +1,4 @@
-## <div align="center" style="font-size:18pt">Breed &#xb7; Trade &#xb7; Fight</div>
-
-# <div align="center" style="font-size:48pt;">&#x136c;</div>
+## Breed &#xb7; Trade &#xb7; Fight
 
 ### Welcome to a new kind of game!
 
@@ -22,4 +20,3 @@ We are currently in EARLY RELEASE, so things are moving fast!
 
 [DEVELOPMENT - hashdragons.io on GitHub](https://github.com/hashdragons/hashdragons.io)
 
-<div align="center" style="font-size:30pt;">&#x1362;</div>
