@@ -1,8 +1,8 @@
-<div align="center" style="font-size:48pt;">&#x136c;</div>
-
 ## <div align="center" style="font-size:18pt">Breed &#xb7; Trade &#xb7; Fight</div>
 
-## Welcome to a new kind of game!
+# <div align="center" style="font-size:48pt;">&#x136c;</div>
+
+### Welcome to a new kind of game!
 
 Hashdragons is fully open and permissionless, and played on the Bitcoin Cash (BCH) blockchain.
 
@@ -14,7 +14,7 @@ Anyone can get involved in the evolution of the game, or implement supporting ap
 
 We are currently in EARLY RELEASE, so things are moving fast!
 
-## Learn more
+### Learn more
 
 [LATEST - hashdragons on Twitter](https://www.twitter.com/hashdragons)
 
