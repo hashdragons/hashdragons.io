@@ -3,8 +3,23 @@
 #### <div align="center">April 10, 2021</div>
 
 # Hashdragons Protocol - DRAFT
+## About this draft...
+If you are reviewing this protocol, the base information you need to know is that:
+- a __hashdragon__ is a 32 byte sequence starting with the 'magic' byte `0xD4`.
+- the __dragonseed__ for a hashdragon is the SHA256 double-hash (SHA256D) of the hashdragon.
+- the __dragonroot__ transaction resulted in a set of 64K transactions containing dragonseed values:
+[75782272cfde665d82f83d0bb54627b6b5d83e172fe34c06c170fcc95be75437](https://explorer.bitcoin.com/bch/tx/75782272cfde665d82f83d0bb54627b6b5d83e172fe34c06c170fcc95be75437)
 
+More information on the above is [here](./hashdragons1.md), should you wish to "read in" a bit to the game concept first.
+
+---
+
+## Protocol Identifier
+Hashdragons protocol has the LOKAD ID of `0x00d401d1`. By definition, the LOKAD ID is encoded little-endian, resulting in a 4 byte protocol identifier for hashdragons of `0xd101d400`
 <!--
+## Hashdragon
+A __hashdragon__ is a 32 byte sequence beginning with the magic byte value `0xD4`, or __dragoncode__. The dragoncode is followed by 31 bytes which describe its attributes or __virtues__.
+
 ## Genesis and Dragonroot
 The __genesis__ transaction for Hashdragons was:
 [34c16ec249253d792e246ae853af1ed93ec83551cc71c4ff017f45beb1d8b3f0](https://explorer.bitcoin.com/bch/tx/34c16ec249253d792e246ae853af1ed93ec83551cc71c4ff017f45beb1d8b3f0)
@@ -12,9 +27,6 @@ The __genesis__ transaction for Hashdragons was:
 Genesis funded __dragonroot__:
 [75782272cfde665d82f83d0bb54627b6b5d83e172fe34c06c170fcc95be75437](https://explorer.bitcoin.com/bch/tx/75782272cfde665d82f83d0bb54627b6b5d83e172fe34c06c170fcc95be75437)
 -->
-## Protocol Identifier
-Hashdragons protocol has the LOKAD ID of `0x00d401d1`. By definition, the LOKAD ID is encoded little-endian, resulting in a 4 byte protocol identifier for hashdragons of `0xd101d400`
-
 ## Events
 Hashdragon "transactions" are called __events__, and are contained in the `OP_RETURN` of a Bitcoin Cash (BCH) transaction. It is recommended that the `OP_RETURN` for a hashdragon event should be at output index 0 of the transaction.
 
@@ -22,7 +34,7 @@ The general form of a hashdragon event is:
 
 |v<sub>out</sub>|ScriptPubKey ("Address")|BCH|Implied asset|
 |-|-|-|-|
-0|OP_RETURN<br/>&lt;lokad id: '0xd101d400'&gt; (4 bytes)<br/>&lt;event_type&gt; (1 byte)<br/>&lt;input_index&gt; (uint32)<br/>&lt;output_index: 'X'&gt; (uint32)<br/>&lt;payload&gt; (varies)<br/>|0|The input_index must hold a Hashdragon<br/> asset from a prior transaction for the <br/>new transaction to be considered<br/> valid according to the game rules.
+0|OP_RETURN<br/>&lt;protocol: '0xd101d400'&gt; (4 bytes)<br/>&lt;event_type&gt; (1 byte)<br/>&lt;input_index&gt; (uint32)<br/>&lt;output_index: 'X'&gt; (uint32)<br/>&lt;payload&gt; (varies)<br/>|0|The input_index must hold a Hashdragon<br/> asset from a prior transaction for the <br/>new transaction to be considered<br/> valid according to the game rules.
 ...|...|any|none
 X|Next Keeper|any|The Hashdragon
 ...|...|any|none
@@ -45,7 +57,7 @@ This event type was used exclusively for __seeding__. Further use after April 20
 
 ```
 OP_RETURN
-    <lokad_id: '0xd101d400'> (4 bytes)
+    <protocol: '0xd101d400'> (4 bytes)
 	<event_code: '0x00'> (1 byte)
 	<reserved> (8 bytes)
 	<payload> [ input_index(uint32) | output_index(uint32) | dragonseed (32 bytes) ]
@@ -56,7 +68,7 @@ Makes the dragonseed available for purchase at the satoshi value in `<cost>`.
 To be valid the `<dragonseed>` payload __must__ match the `dragonseed` value in the prior seeder transaction.
 ```
 OP_RETURN
-    <lokad_id: '0xd101d400'> (4 bytes)
+    <protocol: '0xd101d400'> (4 bytes)
 	<event_code: '0xD0'> (1 byte)
 	<input_index> (uint32)
 	<output_index> (uint32)
@@ -69,7 +81,7 @@ Instantiates the hashdragon from its dragonseed, where to be valid the SHA256D h
 
 ```
 OP_RETURN
-    <lokad_id: '0xd101d400'> (4 bytes)
+    <protocol: '0xd101d400'> (4 bytes)
 	<event_code: '0xD1'> (1 byte)
 	<input_index> (uint32)
 	<output_index> (uint32)
@@ -83,7 +95,7 @@ Wandering allows the hashdragon to be __moved__ to another keeper address, and s
 
 ```
 OP_RETURN
-    <lokad_id: '0xd101d400'> (4 bytes)
+    <protocol: '0xd101d400'> (4 bytes)
 	<event_code: '0xD2'> (1 byte)
 	<input_index> (uint32)
 	<output_index> (uint32)
@@ -95,7 +107,7 @@ The referenced input _must_ contain the keeper address in the __scriptSig__, and
 
 ```
 OP_RETURN
-    <lokad_id: '0xd101d400'> (4 bytes)
+    <protocol: '0xd101d400'> (4 bytes)
 	<event_code: '0xD2'> (1 byte)
 	<input_index> (uint32)
 	<output_index> (uint32)
@@ -120,7 +132,7 @@ ELSE invalid (failure would mean a SHA256 hash collision!)
 Hibernating allows the keeper to declare the hashdragon "asleep" and unlikely to participate in any activity for a while.
 ```
 OP_RETURN
-    <lokad_id: '0xd101d400'> (4 bytes)
+    <protocol: '0xd101d400'> (4 bytes)
 	<event_code: '0xD3'> (1 byte)
 	<input_index> (uint32)
 	<output_index> (uint32)
@@ -138,7 +150,7 @@ IMPORTANT: This event is only valid if the Maturity value for both dragons equal
 
 ```
 OP_RETURN
-    <lokad_id: '0xd101d400'> (4 bytes)
+    <protocol: '0xd101d400'> (4 bytes)
 	<event_type: '0xD4'> (1 byte)
 	<first_input_index> (uint32)
 	<first_output_index> (uint32)
@@ -147,16 +159,18 @@ OP_RETURN
 	<third_output_index> (uint32)
 ```
 ---
-### Trade TBA
+### Trade (TBA)
+Preview:
 - this is a more complex event
-- will require a custom scriptPubKey on the output
-- will be an 'atomic swap' based on exchange of hash secrets
+- requires a custom scriptPubKey on the output
+- requires an 'atomic swap' based on exchange of hash secrets
 
-### Fight TBA
+### Fight (TBA)
+Preview:
 - a more complex event
-- will require a custom scriptPubKey on the output
-- will be a two-phase commit on-chain, i.e. multisig
-
-...with more event types to come!
+- requires a custom scriptPubKey on the output
+- requires a two-phase commit on-chain, i.e. multisig
+---
+...there are more event types to come
 
 <!--(__scriptSig__, __scriptPubKey__)-->
