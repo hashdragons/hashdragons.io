@@ -93,9 +93,10 @@ Inner Light|&lt; 20|Ignorant
 &nbsp;|255|Genius
 Presence|0|Invisible
 &nbsp;|&lt; 10|Ghost
-&nbsp;|&lt; 30|Shadow
-&nbsp;|&gt; 240|Shimmering
-&nbsp;|255|Practical
+&nbsp;|&lt; 40|Shadow
+&nbsp;|&lt; 60|Shimmering
+&nbsp;|&gt; 230|Rock
+&nbsp;|255|Marble
 Charm|&lt; 5|Brutal
 &nbsp;|&lt; 15|Unfriendly
 &nbsp;|&gt; 190|Friendly

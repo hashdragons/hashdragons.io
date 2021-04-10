@@ -22,7 +22,7 @@ The general form of a hashdragon event is:
 
 |v<sub>out</sub>|ScriptPubKey ("Address")|BCH|Implied asset|
 |-|-|-|-|
-0|OP_RETURN<br/>&lt;lokad id: '0xd101d400'&gt; (4 bytes)<br/>&lt;event_type&gt; (1 byte)<br/>&lt;input_index&gt; (uint32)<br/>&lt;output_index: 'X'&gt; (uint32)<br/>&lt;cost in satoshi&gt; (uint64)<br/>&lt;payload&gt; (varies)<br/>|0|The input_index must hold a Hashdragon<br/> asset from a prior transaction for the <br/>new transaction to be considered<br/> valid according to the game rules.
+0|OP_RETURN<br/>&lt;lokad id: '0xd101d400'&gt; (4 bytes)<br/>&lt;event_type&gt; (1 byte)<br/>&lt;input_index&gt; (uint32)<br/>&lt;output_index: 'X'&gt; (uint32)<br/>&lt;payload&gt; (varies)<br/>|0|The input_index must hold a Hashdragon<br/> asset from a prior transaction for the <br/>new transaction to be considered<br/> valid according to the game rules.
 ...|...|any|none
 X|Next Keeper|any|The Hashdragon
 ...|...|any|none
