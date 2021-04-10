@@ -10,7 +10,7 @@ If you are reviewing this protocol, the base information you need to know is tha
 - the __dragonroot__ transaction resulted in a set of 64K transactions containing dragonseed values:
 [75782272cfde665d82f83d0bb54627b6b5d83e172fe34c06c170fcc95be75437](https://explorer.bitcoin.com/bch/tx/75782272cfde665d82f83d0bb54627b6b5d83e172fe34c06c170fcc95be75437)
 
-More information on the above is [here](./hashdragons1.md), should you wish to "read in" a bit to the game concept first.
+More information on the above is [here](./hashdragons1.md), and [here](./readme.md) should you wish to "read in" a bit to the game concept first.
 
 ---
 
