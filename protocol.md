@@ -101,15 +101,20 @@ OP_RETURN
 	<output_index> (uint32)
 	<transaction_ref> (32 bytes)
 ```
-To avoid the creation of `doppelgangers` or duplicated lifelines for a hashdragon, for example by issuing another valid event and a rescue event in a single block, or multiple rescues in a single block, the following additional validity restrictions apply to rescues:
+To avoid the creation of "doppelgangers" or duplicated lifelines for a hashdragon, for example, by issuing another valid event and a rescue event in a single block, or multiple rescues for the same hashdragon in a single block, the following additional validity restrictions apply to rescues:
 
-- Where a valid event and a rescue for the same hashdragon appear in the same block, _the rescue is invalid_, and must not be used to update the dragonset.
-- Where multiple rescues for the same hashdragon appear in the same block the rescue used to update the dragonset will be the rescue that has the __lowest__ transaction hash value after being exclusive or'd with the hash of the block header in which duplicates appear, i.e.:
+- Where a valid event and a rescue for the same hashdragon appear in the same block, _the rescue is invalid_, and __must not__ be used to update the dragonset.
+- Where multiple rescues for the same hashdragon appear in the same block the rescue used to update the dragonset will be the rescue that has the __lowest__ transaction hash value after being exclusive or'd with the hash of the block header _in which duplicates appear_, i.e.:
 
-`IF <rescue_tx_ref1 XOR block hash> < <rescue_tx_ref2 XOR block_hash> => rescue_tx_ref1`
-
-
-
+```
+<hash1> = <rescue_tx_ref1 XOR block_hash>
+<hash2> = <rescue_tx_ref2 XOR block_hash>
+IF <hash1> LESS_THAN <hash2>
+	THEN <rescue_tx_ref1>
+ELSE IF <hash2> LESS_THAN <hash1>
+	THEN <rescue_tx_ref2>
+ELSE invalid (failure would mean a SHA256 hash collision!)
+```
 
 ### Hibernate
 Hibernating allows the keeper to declare the hashdragon "asleep" and unlikely to participate in any activity for a while.
@@ -142,11 +147,16 @@ OP_RETURN
 	<third_output_index> (uint32)
 ```
 ---
-### Trade
-TBA
-### Fight
-TBA
+### Trade TBA
+- this is a more complex event
+- will require a custom scriptPubKey on the output
+- will be an 'atomic swap' based on exchange of hash secrets
 
-...more...
+### Fight TBA
+- a more complex event
+- will require a custom scriptPubKey on the output
+- will be a two-phase commit on-chain, i.e. multisig
 
-(__scriptSig__, __scriptPubKey__)
+...with more event types to come!
+
+<!--(__scriptSig__, __scriptPubKey__)-->
