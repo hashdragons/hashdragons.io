@@ -102,7 +102,8 @@ Charm|&lt; 5|Brutal
 &nbsp;|&gt; 190|Friendly
 &nbsp;|&gt; 230|Charming
 &nbsp;|&gt; 250|Charismatic
-Strangeness|&gt; 200|Strange
+Strangeness|&lt; 10|Practical
+&nbsp;&gt; 200|Strange
 &nbsp;|&gt; 240|Weird
 Beauty|&lt; 10|Ugly
 &nbsp;|&lt; 20|Unattractive
