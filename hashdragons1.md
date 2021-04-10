@@ -126,7 +126,7 @@ Hashdragons are so-called NFTs or "non-fungible tokens" that live in the transac
 
 The [Lokad prefix](https://upgradespecs.bitcoincashnode.org/op_return-prefix-guideline/) for Hashdragons is `0x00d401d1` as registered in the [BCH protocol list](https://github.com/bitcoincashorg/bitcoincash.org/blob/master/etc/protocols.csv).
 
-The general format for a hashdragons transaction in `OP_RETURN` is (where `LE` means an integer value is encoded in little-endian format):
+The general format for a hashdragons transaction in `OP_RETURN` is:
 <table>
   <tr>
     <td><b>v<sub>out</sub></b></td>
@@ -139,9 +139,8 @@ The general format for a hashdragons transaction in `OP_RETURN` is (where `LE` m
     <td>OP_RETURN<BR>
 &lt;lokad id: '0xd101d400'&gt; (4 bytes)<br/>
 &lt;event_type&gt; (1 byte)<br/>
-&lt;input_index&gt; (4 byte LE integer)<br/>
-&lt;output_index: 'X'&gt; (4 byte LE integer)<br/>
-&lt;cost in satoshi&gt; (8 byte LE integer)<br/>
+&lt;input_index&gt; (4 byte integer)<br/>
+&lt;output_index: 'X'&gt; (4 byte integer)<br/>
 &lt;payload&gt; (varies)<br/>
   <td>0</td>
   <td>
@@ -168,7 +167,7 @@ The general format for a hashdragons transaction in `OP_RETURN` is (where `LE` m
   <tr>
  </table>
 
-The __keeper__ of a hashdragon is the unspent transaction address that is paired with a valid hashdragon `OP_RETURN` that can be traced back to dragonroot.
+The __keeper__ of a hashdragon is the output transaction that is paired with a valid hashdragon `OP_RETURN` that can be traced back to dragonroot.
 
 ## About Dragonseed
 The __dragonseed__ for a hashdragon is the SHA256 double hash (SHA256D) of the hashdragon.
