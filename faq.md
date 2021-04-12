@@ -24,7 +24,7 @@ d1
 d4a7bcef1819b01a9e57ecbc430d9b3b059dda38428ecddda440e5273c44c885
 ```
 
-Per the [protocol](https://github.com/hashdragons/hashdragons.io/blob/master/hashdragons1.md#where-do-hashdragons-live), the second `01000000` is the index of the output designating the keeper.  The output at index 1 goes to address `qrypmrwr8d53xg26ktwt803l8aeu6yeh7y2rw0dx8k` so the owner of that address is the keeper of the hashdragon `d4a7bcef1819b01a9e57ecbc430d9b3b059dda38428ecddda440e5273c44c885`.
+Per the [protocol](https://github.com/hashdragons/hashdragons.io/blob/master/hashdragons1.md#where-do-hashdragons-live), the second `00000001` is the index of the output designating the keeper.  The output at index 1 goes to address `qrypmrwr8d53xg26ktwt803l8aeu6yeh7y2rw0dx8k` so the owner of that address is the keeper of the hashdragon `d4a7bcef1819b01a9e57ecbc430d9b3b059dda38428ecddda440e5273c44c885`.
 
 ### Why aren't the hashdragons SLP Tokens?
 
@@ -35,4 +35,4 @@ There are two reasons for this, both rather technical:
 - Because SLP doesn't support the on-chain atomic swaps needed to execute a transfer of an asset in exchange for a payment without either a moderator/third party or p2p private communication.
 - Because the validity of a hashdragon game event often relies on rules that use the block hash of the event that the transaction is in (which is not predictable).
 
-So SLP can associate and send NFTs but can't trade them without something else going on... this is also the weakness of Ethereum's ERC20 ICOs in our view.
+So SLP can associate and send NFTs but can't trade them without something else going on.
