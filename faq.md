@@ -18,13 +18,13 @@ For example, if a hashdragon has just hatched, the `OP_RETURN` clause would [loo
 OP_RETURN
 d101d400
 d1
-00000001
-00000001
+01000000
+01000000
 0000000000000000
 d4a7bcef1819b01a9e57ecbc430d9b3b059dda38428ecddda440e5273c44c885
 ```
 
-Per the [protocol](https://github.com/hashdragons/hashdragons.io/blob/master/hashdragons1.md#where-do-hashdragons-live), the second `00000001` is the index of the output designating the keeper.  The output at index 1 goes to address `qrypmrwr8d53xg26ktwt803l8aeu6yeh7y2rw0dx8k` so the owner of that address is the keeper of the hashdragon `d4a7bcef1819b01a9e57ecbc430d9b3b059dda38428ecddda440e5273c44c885`.
+Per the [protocol](https://github.com/hashdragons/hashdragons.io/blob/master/hashdragons1.md#where-do-hashdragons-live), the second `01000000` is the index of the output designating the keeper.  The output at index 1 goes to address `qrypmrwr8d53xg26ktwt803l8aeu6yeh7y2rw0dx8k` so the owner of that address is the keeper of the hashdragon `d4a7bcef1819b01a9e57ecbc430d9b3b059dda38428ecddda440e5273c44c885`.
 
 ### Why aren't the hashdragons SLP Tokens?
 
