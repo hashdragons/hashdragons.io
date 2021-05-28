@@ -1,0 +1,585 @@
+{
+  "openapi": "3.0.2",
+  "info": {
+    "title": "Hashdragons",
+    "description": "WORK IN PROGRESS - Proposed standard REST API for Hashdragons",
+    "contact": {
+      "url": "https://github.com/hashdragons/hashdragons.io"
+    },
+    "license": {
+      "name": "MIT",
+      "url": "https://github.com/hashdragons/hashdragons.io/blob/master/LICENSE"
+    },
+    "version": "1.0.0"
+  },
+  "externalDocs": {
+    "description": "Find out more about Hashdragons",
+    "url": "https://hashdragons.io"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:8080/d4/api/v1",
+      "description": "Development server"
+    }
+  ],
+  "tags": [
+    {
+      "name": "hashdragon",
+      "description": "About Hashdragons",
+      "externalDocs": {
+        "description": "GitHub Repo",
+        "url": "https://github.com/hashdragons/hashdragons.io/blob/master/hashdragons1.md"
+      }
+    },
+    {
+      "name": "event",
+      "description": "The BCH blockchain protocol for Hashdragon events",
+      "externalDocs": {
+        "url": "https://github.com/hashdragons/hashdragons.io/blob/master/protocol.md"
+      }
+    },
+    {
+      "name": "system",
+      "description": "About this API server"
+    }
+  ],
+  "paths": {
+    "/system/status": {
+      "get": {
+        "tags": [
+          "system"
+        ],
+        "summary": "Get current status of the server",
+        "description": "View status of the local dragonset and service provider",
+        "operationId": "getSystemStatus",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/inline_response_200"
+                }
+              }
+            }
+          },
+          "501": {
+            "description": "Not Implemented"
+          }
+        },
+        "security": []
+      }
+    },
+    "/hashdragon/info/{hashdragon}": {
+      "get": {
+        "tags": [
+          "hashdragon"
+        ],
+        "summary": "General information about this hashdragon",
+        "description": "General information about the Hashdragon, including its provenance an current activity",
+        "operationId": "hashdragonInfo",
+        "parameters": [
+          {
+            "name": "hashdragon",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string",
+              "format": "hex"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/inline_response_200_1"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid Input"
+          },
+          "501": {
+            "description": "Not Implemented"
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/hashdragon/describe/{hashdragon}": {
+      "get": {
+        "tags": [
+          "hashdragon"
+        ],
+        "summary": "Explore the virtues of individual hashdragons",
+        "operationId": "describeHashdragon",
+        "parameters": [
+          {
+            "name": "hashdragon",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string",
+              "format": "hex"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/inline_response_200_2"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid input"
+          },
+          "501": {
+            "description": "Not Implemented"
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/hashdragon/address/{hashdragon}": {
+      "get": {
+        "tags": [
+          "hashdragon"
+        ],
+        "summary": "Get the BCH address for a Hashdragon",
+        "operationId": "hashdragonAddress",
+        "parameters": [
+          {
+            "name": "hashdragon",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string",
+              "format": "hex"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string",
+                  "description": "A custom BCH address"
+                }
+              }
+            }
+          },
+          "501": {
+            "description": "Not Implemented"
+          }
+        }
+      }
+    },
+    "/hashdragon/qr/{hashdragon}": {
+      "get": {
+        "tags": [
+          "hashdragon"
+        ],
+        "summary": "Get the BCH address for a Hashdragon",
+        "operationId": "hashdragonQR",
+        "parameters": [
+          {
+            "name": "hashdragon",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string",
+              "format": "hex"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "image/png": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid Input"
+          },
+          "501": {
+            "description": "Not Implemented"
+          }
+        }
+      }
+    },
+    "/hashdragon/song/{hashdragon}": {
+      "get": {
+        "tags": [
+          "hashdragon"
+        ],
+        "summary": "Get a MIDI file for a Hashdragon song",
+        "operationId": "hashdragonSong",
+        "parameters": [
+          {
+            "name": "hashdragon",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string",
+              "format": "hex"
+            }
+          },
+          {
+            "name": "format",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "chant",
+                "traditional",
+                "quartet"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "audio/midi": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid Input"
+          },
+          "501": {
+            "description": "Not Implemented"
+          }
+        }
+      }
+    },
+    "/event/create": {
+      "post": {
+        "tags": [
+          "event"
+        ],
+        "summary": "Create an Event transaction to sign",
+        "operationId": "createEvent",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Invalid input"
+          },
+          "501": {
+            "description": "Not Implemented"
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/event/send": {
+      "post": {
+        "tags": [
+          "event"
+        ],
+        "summary": "Send the event to the BCH blockchain",
+        "operationId": "sendEvent",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Invalid input"
+          },
+          "501": {
+            "description": "Not Implemented"
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Hashdragon": {
+        "type": "string",
+        "format": "hex"
+      },
+      "inline_response_200": {
+        "type": "object",
+        "properties": {
+          "protocol": {
+            "type": "string",
+            "description": "Lokad ID for Hashdragons",
+            "format": "hex",
+            "default": "d101d400"
+          },
+          "utc": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "uptime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "relay": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "height": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "dragonset": {
+            "$ref": "#/components/schemas/inline_response_200_dragonset"
+          },
+          "email": {
+            "type": "string",
+            "format": "email"
+          },
+          "donate": {
+            "type": "string",
+            "description": "BCH Address for voluntary donations to this service provider"
+          },
+          "message": {
+            "type": "string"
+          }
+        }
+      },
+      "inline_response_200_1": {
+        "type": "object",
+        "properties": {
+          "hashdragon": {
+            "type": "string",
+            "format": "hex"
+          },
+          "provenance": {
+            "$ref": "#/components/schemas/inline_response_200_1_provenance"
+          },
+          "activity": {
+            "$ref": "#/components/schemas/inline_response_200_1_activity"
+          },
+          "location": {
+            "$ref": "#/components/schemas/inline_response_200_1_location"
+          }
+        }
+      },
+      "inline_response_200_2": {
+        "type": "object",
+        "properties": {
+          "hashdragon": {
+            "type": "string",
+            "format": "hex"
+          },
+          "description": {
+            "type": "string"
+          },
+          "strength": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "identity": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          },
+          "inner_light": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "color": {
+            "type": "string",
+            "format": "hex"
+          },
+          "colorname": {
+            "type": "string"
+          },
+          "presence": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "strangeness": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "charm": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "beauty": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "truth": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "magic": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "powers": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          },
+          "karma": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "arcana": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "cabala": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "maturity": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "sigil": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          "next_premonition": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "inline_response_200_dragonset": {
+        "type": "object",
+        "properties": {
+          "state": {
+            "type": "string",
+            "format": "hex"
+          },
+          "commitment": {
+            "type": "string",
+            "format": "hex"
+          }
+        }
+      },
+      "inline_response_200_1_provenance": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "original",
+              "spawn",
+              "unborn"
+            ]
+          }
+        }
+      },
+      "inline_response_200_1_activity": {
+        "type": "object",
+        "properties": {
+          "event": {
+            "type": "string",
+            "enum": [
+              "hatch",
+              "wander",
+              "hibernate",
+              "trapped",
+              "rescue",
+              "breed",
+              "trade",
+              "fight"
+            ]
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "keeper": {
+            "type": "string",
+            "description": "Keeper address in BCH address format"
+          }
+        }
+      },
+      "inline_response_200_1_location": {
+        "type": "object",
+        "properties": {
+          "block": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "tx": {
+            "type": "string",
+            "format": "hex"
+          },
+          "op_return": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "api_key": {
+        "type": "apiKey",
+        "name": "jwt",
+        "in": "header"
+      }
+    }
+  }
+}
